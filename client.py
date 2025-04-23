@@ -137,7 +137,7 @@ st.markdown("""
 
 # === API cấu hình
 # API_ENDPOINT = "http://localhost:5001/chat"
-API_ENDPOINT = "https://rag-backend.onrender.com/chat"
+API_ENDPOINT = "https://agentic-rag-597624481467.asia-southeast1.run.app/chat"
 HEADERS = {"Content-Type": "application/json"}
 
 # === Trạng thái session
