@@ -1,0 +1,24 @@
+version: '3.9'
+
+services:
+  rag_api:
+    build: .
+    container_name: rag_flask_api
+    ports:
+      - "5000:5000"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - YESCALE_API_KEY=${YESCALE_API_KEY}
+      - PORT=5001
+    volumes:
+      - ./chroma_faq_store:/app/chroma_faq_store
+    depends_on:
+      - chromadb
+
+  chromadb:
+    image: chromadb/chroma
+    container_name: chromadb
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./chroma_faq_store:/chroma/chroma

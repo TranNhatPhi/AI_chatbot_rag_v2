@@ -1,0 +1,11 @@
+openai-agents
+python-dotenv==1.0.1
+openai
+pandas
+gspread
+oauth2client
+flask_cors
+streamlit
+faiss-cpu
+sentence-transformers
+chromadb

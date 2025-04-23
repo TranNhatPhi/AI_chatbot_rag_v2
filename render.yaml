@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: rag-backend
+    env: python
+    buildCommand: ""
+    startCommand: "python serve.py"
+    envVars:
+      - key: OPENAI_API_KEY
+        value: ${OPENAI_API_KEY}
+      - key: YESCALE_API_KEY
+        value: ${YESCALE_API_KEY}
+    plan: free
